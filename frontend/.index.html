@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>💼 Job Application Tracker</h1>
+            <p>Track your job applications efficiently</p>
+        </header>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total</h3>
+                <p id="totalCount">0</p>
+            </div>
+
+            <div class="card applied-card">
+                <h3>Applied</h3>
+                <p id="appliedCount">0</p>
+            </div>
+
+            <div class="card interview-card">
+                <h3>Interview</h3>
+                <p id="interviewCount">0</p>
+            </div>
+
+            <div class="card offer-card">
+                <h3>Offer</h3>
+                <p id="offerCount">0</p>
+            </div>
+
+            <div class="card rejected-card">
+                <h3>Rejected</h3>
+                <p id="rejectedCount">0</p>
+            </div>
+
+        </section>
+
+        <!-- Application Form -->
+        <section class="form-section">
+
+            <h2>Add New Application</h2>
+
+            <form id="applicationForm">
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="Enter company name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Job Role</label>
+                    <input
+                        type="text"
+                        id="role"
+                        placeholder="Enter role"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" required>
+                        <option value="Applied">Applied</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Offer">Offer</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Application Date</label>
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="followUpDate">Follow-Up Date</label>
+                    <input
+                        type="date"
+                        id="followUpDate"
+                        required
+                        >
+                    </div>
+
+                <button type="submit" class="btn-add">
+                    Add Application
+                </button>
+
+            </form>
+
+        </section>
+        <section class="search-section">
+
+             <h2>Search Applications</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by company or role..."
+                >
+
+            </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+
+            <h2>Filter Applications</h2>
+
+            <div class="filter-buttons">
+
+                <button class="filter-btn" data-filter="All">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="Applied">
+                    Applied
+                </button>
+
+                <button class="filter-btn" data-filter="Interview">
+                    Interview
+                </button>
+
+                <button class="filter-btn" data-filter="Offer">
+                    Offer
+                </button>
+
+                <button class="filter-btn" data-filter="Rejected">
+                    Rejected
+                </button>
+
+            </div>
+
+        </section>
+        <section class="followup-section">
+
+            <h2>Upcoming Follow-Ups</h2>
+
+            <div id="followUpContainer">
+
+            </div>
+
+        </section>
+
+        <!-- Applications Table -->
+        <section class="table-section">
+
+            <h2>Application List</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Application Date</th>
+                            <th>Follow-Up Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applicationTableBody">
+
+                        <!-- JavaScript will insert rows here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
